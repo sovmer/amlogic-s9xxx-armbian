@@ -280,7 +280,7 @@ jobs:
           tag: ${{ steps.clean.outputs.build_tag }}
           artifacts: build/output/images/*
           allowUpdates: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.MYTOKEN }}
 
       - name: Rebuild Armbian
         uses: ophub/amlogic-s9xxx-armbian@main
@@ -305,7 +305,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: false
           replacesArtifacts: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.MYTOKEN }}
           body: |
             ### Armbian Image information
             - Default username: root
